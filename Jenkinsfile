@@ -1,14 +1,13 @@
-pipeline{
-    agent{
-        docker{
+pipeline {
+    agent {
+        docker {
             image 'ruby'
             args '--link selenium_server'
         }
     }
-
-    stages{
+    stages {
         stage('Preparation'){
-            steps{
+            steps {
                 sh "bundle install"
             }
         }
