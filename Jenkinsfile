@@ -12,8 +12,12 @@ pipeline {
             }
         }
 
-        stage('Run Tests'){
-            sh "bundle exec cucumber -p ci -t @smoke"
+        stage('Run Tests') {
+            steps {
+                script {
+                        sh "bundle exec cucumber -p ci -t @smoke"
+                }
+            }
         }
     }
 }
