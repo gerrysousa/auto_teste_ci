@@ -47,3 +47,6 @@ docker run ^
 
 #Acessar o docker do jenkins pelo terminal
 docker exec -i -t jenkins sh
+
+
+Aula jenkins completa.
