@@ -45,3 +45,5 @@ docker run ^
   jenkinsci/blueocean
 ----------------------------------------------
 
+#Acessar o docker do jenkins pelo terminal
+docker exec -i -t jenkins sh
