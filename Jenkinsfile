@@ -8,7 +8,7 @@ pipeline{
 
     stages{
         stage('Preparation'){
-            step{
+            steps{
                 sh "bundle install"
             }
         }
