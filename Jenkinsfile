@@ -14,9 +14,13 @@ pipeline {
 
         stage('Run Tests') {
             steps {
-                script {
+                script {                       
+                
+                try {
                         sh "bundle exec cucumber -p ci -t @smoke"
-                }
+                    } finally {
+                        cucumber fileIncludePattern: '**/*.json', jsonReportDirectory: 'log', sortingMethod: 'ALPHABETICAL'
+                    }
             }
         }
     }
