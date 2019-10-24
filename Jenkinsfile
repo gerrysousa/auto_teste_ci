@@ -20,7 +20,7 @@ pipeline {
 			}
 			finally {
 				cucumber fileIncludePattern: '**/*.json', jsonReportDirectory: 'log', sortingMethod: 'ALPHABETICAL'
-			}
+			} 
 		}
 	    }
 	}
